@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ef">
+  <meta name="description" content="Full Vietnamese and Chinese menu at Hao Phong Restaurant Footscray. Browse by category with prices.">
+  <title>Our Menu | Hao Phong Restaurant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="menu">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>136 Hopkins St, Footscray VIC 3011</span>
+      <span>10:30am – 9:30pm · Closed Wednesday</span>
+      <a href="tel:+61396898373">(03) 9689 8373</a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Hao Phong homepage">
+        <strong>HAO PHONG</strong>
+        <span>VIETNAMESE & CHINESE RESTAURANT</span>
+      </a>
+
+      <button id="mobileToggle" class="mobile-toggle"
+              aria-label="Toggle navigation" aria-expanded="false"
+              aria-controls="mainNav" type="button">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+		<a href="index.html#specials">Chef's Specials</a>
+		<a href="menu.html" class="active" aria-current="page">Our Menu</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#visit">Find Us</a>
+      </nav>
+
+      <a class="header-call" href="tel:+61396898373">
+        Call Us ↗
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-hero">
+      <div class="container menu-hero-inner">
+        <a class="back-link" href="index.html">← Back to Home</a>
+        <p class="eyebrow">VIETNAMESE & CHINESE CUISINE</p>
+        <h1>Our Menu<span>.</span></h1>
+        <p>
+          Explore the complete Hao Phong menu.
+          Select a category below to discover our dishes.
+        </p>
+      </div>
+    </section>
+
+    <section class="menu-page-section">
+      <div class="container">
+
+        <div class="menu-controls">
+          <div>
+            <p class="small-heading">BROWSE BY CATEGORY</p>
+            <span id="menuTotalCategories"></span>
+          </div>
+
+          <label class="search-field">
+            <span aria-hidden="true">⌕</span>
+            <input id="menuSearch"
+              type="search"
+              placeholder="Search any dish..."
+              aria-label="Search all menu items"
+              autocomplete="off">
+          </label>
+        </div>
+
+        <div class="category-scroller">
+          <div class="category-tabs"
+               id="menuCategories"
+               role="group"
+               aria-label="Menu categories"></div>
+        </div>
+
+        <div class="menu-content-header">
+          <div>
+            <p class="eyebrow" id="categoryEyebrow">OUR SELECTION</p>
+            <h2 id="selectedCategoryTitle">Chef's Specials</h2>
+          </div>
+          <span id="menuItemCount" aria-live="polite"></span>
+        </div>
+
+        <!-- Only chosen category is rendered.
+             Searching shows matches from every category. -->
+        <div class="menu-items" id="menuItems"></div>
+
+        <div id="menuEmpty" class="menu-empty" hidden>
+          <h3>No dishes found</h3>
+          <p>Try a different keyword or select another category.</p>
+          <button type="button" id="clearSearch"
+                  class="button button-outline">Clear search</button>
+        </div>
+
+        <div class="menu-page-footer">
+          <p>
+            Prices are in Australian dollars. Please confirm
+            current prices and availability with the restaurant.
+          </p>
+
+          <a href="tel:+61396898373" class="button button-primary">
+            Call Restaurant ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <strong>HAO PHONG</strong>
+        <span>VIETNAMESE & CHINESE RESTAURANT</span>
+      </div>
+
+      <div>
+        <small>LOCATION</small>
+        <p>136 Hopkins St<br>Footscray VIC 3011</p>
+      </div>
+
+      <div>
+        <small>CONTACT</small>
+        <a href="tel:+61396898373">(03) 9689 8373</a>
+      </div>
+
+      <div class="footer-links">
+        <small>EXPLORE</small>
+        <a href="index.html">Home</a>
+        <a href="index.html#specials">Chef's Specials</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Hao Phong Restaurant</span>
+      <span>haophong.com.au</span>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:+61396898373">
+    Call Hao Phong · (03) 9689 8373
+  </a>
+</body>
+</html>
