@@ -65,7 +65,7 @@ window.HAO_MENU = [
     [null,"Pipi",null,null,"37"],
     [null,"Oyster",null,null,"15.8"],
     [null,"Barramundi ( Hấp/ Rang muối)",null,null,"85"],
-    [null,"Lobster tail with noodles",null,null,"95"],
+    [null,"Lobster tail and noodle in XO sauce",null,null,"95"],
     [null,"Soft shell crab",null,null,"23"],
     [null,"Combo Lau Canh Chua Ca Kho",null,null,"109"],
     [null,"Chua 1 con",null,null,"95"],
