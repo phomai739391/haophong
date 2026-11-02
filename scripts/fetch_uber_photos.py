@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch the eight specifically matched Hao Phong menu photos, as approved by the restaurant.
+"""Fetch the six currently approved Hao Phong menu photos, as approved by the restaurant.
 Run: python scripts/fetch_uber_photos.py
 Use --strict to treat any missing photo as a build failure. No external dependencies.
 """
@@ -14,6 +14,12 @@ strict=argparse.ArgumentParser()
 strict.add_argument('--strict',action='store_true')
 args=strict.parse_args()
 failed=[]
+# Customer-approved curation: these two images must not appear in the build.
+for removed_name in ('prawn-wontons.jpg', 'king-prawn-sliced-pork-noodles.jpg'):
+    old = ROOT / 'images' / 'uber' / removed_name
+    if old.exists():
+        old.unlink()
+        print('Removed disapproved photo:', removed_name)
 for item in data['uberPhotos']:
     name=item['id']; url=item['url']; path=ROOT/'images'/item['file']
     if not re.fullmatch(r'[a-z0-9-]+',name) or not re.fullmatch(r'uber/[a-z0-9-]+\.jpg',item['file']):

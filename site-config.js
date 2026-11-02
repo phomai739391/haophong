@@ -1,5 +1,5 @@
 "use strict";
-/* Hao Phong V6.2 · Approved image mappings. The restaurant confirms permission
+/* Hao Phong V6.3 · Approved image mappings. The restaurant confirms permission
    to display the Hao Phong food photographs indexed on Uber Eats.
    images/uber/*.jpg are downloaded when running scripts/fetch_uber_photos.py
    or during the GitHub Pages workflow; if absent, CDN images are attempted.
@@ -63,24 +63,6 @@ window.HAO_CONFIG = {
       "file": "uber/prawn-pork-rice-paper-rolls.jpg",
       "source": "https://www.ubereats.com/au/store/hao-phong/3FVxYAN7X6yBj5SUnU7rew",
       "title": "Prawn & Pork Rice Paper Rolls"
-    },
-    {
-      "id": "prawn-wontons",
-      "alt": "Prawn wontons with broccoli and spring onion in a white bowl",
-      "placement": "gallery",
-      "url": "https://tb-static.uber.com/prod/image-proc/processed_images/ab091863cea80d7ade1da2797fc3dc39/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
-      "file": "uber/prawn-wontons.jpg",
-      "source": "https://www.ubereats.com/au/store/hao-phong/3FVxYAN7X6yBj5SUnU7rew",
-      "title": "Prawn Wontons"
-    },
-    {
-      "id": "king-prawn-sliced-pork-noodles",
-      "alt": "King prawns and sliced pork with egg noodles, greens and broth",
-      "placement": "gallery",
-      "url": "https://tb-static.uber.com/prod/image-proc/processed_images/b6e8fe773a9c7d0a25682bef042655bc/58f691da9eaef86b0b51f9b2c483fe63.jpeg",
-      "file": "uber/king-prawn-sliced-pork-noodles.jpg",
-      "source": "https://www.ubereats.com/au/store/hao-phong/3FVxYAN7X6yBj5SUnU7rew",
-      "title": "King Prawn & Sliced Pork Noodles"
     }
   ]
 };

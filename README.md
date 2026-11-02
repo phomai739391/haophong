@@ -1,22 +1,33 @@
-# Hao Phong Restaurant — V6.2 · Additional Uber Eats photography
+> **Latest update V6.5:** Restored sharp HP SVG + editable HAO PHONG wordmark, with matching geometric font for the wordmark only. See `UPDATE_NOTES_V6_5.md`. The rest of the site typography remains original.
 
-**1 November 2026** · Vietnamese & Chinese Restaurant · 136 Hopkins Street, Footscray VIC 3011
+# Hao Phong Restaurant — V6.3 · Client refinements
 
-This is the same two-page HTML/CSS/vanilla JS website as V6.1, with **eight more food photographs matched to the correct Hao Phong items from its Uber Eats listing**. The user representing the restaurant confirmed the reuse permission in this conversation. Restaurant photos already present in the original ZIP have been preserved. The site works without a database or paid API service.
+**2 November 2026** · Vietnamese & Chinese Restaurant · 136 Hopkins Street, Footscray VIC 3011
+
+This is the same two-page HTML/CSS/vanilla JS website as V6.1, with **six approved Uber Eats food photographs matched to the correct Hao Phong items from its Uber Eats listing**. The user representing the restaurant confirmed the reuse permission in this conversation. Restaurant photos already present in the original ZIP have been preserved. The site works without a database or paid API service.
+
+
+## Client amendments — 2 November 2026
+
+- The homepage and menu use the **provided Hao Phong logo reference** in the masthead and footer rather than a near-match font. This is an original-resolution screenshot crop, not a vector master.
+- Chef's Specials: `Chua 1 con` → **Canh Chua Ca** and `Kho 1 con` → **Ca Kho**. Both remain **$95**. All menu records are preserved: 24 categories, 193 items, 13 specials.
+- The two photos expressly disapproved by the restaurant, **Prawn Wontons** (broccoli bowl) and **King Prawn & Sliced Pork Noodles** (bowl with soup), are removed from the gallery manifest and excluded from download. Their menu entries (if any) are untouched.
+- There are now 18 original gallery photos + 4 approved Uber Eats additions = **22 gallery images**, plus seven mapped Chef's Specials photos.
+- GitHub Pages workflow now **actually runs** the photo-downloader before deploying, as described below. Successful image retrieval still depends on Uber CDN access at deployment time.
 
 ## Photo update: what is included and how it loads
 
-Images were visually checked on the Hao Phong Uber Eats menu or its linked photo thumbnails. The eight additions and their precise source URLs are recorded in `site-config.js`. We **could not download the JPEG bytes in this execution environment** because its network blocks external host/DNS requests, so the ZIP contains photo mappings and an executable downloader, **not the new eight JPG files**. The real photo files are downloaded on the GitHub Pages runner (which normally has internet access). Until then the website attempts the same *exact* Uber Eats CDN URLs in the browser. If both fail, an accessible photo placeholder appears instead of a broken-image icon. No other restaurant's photos are used.
+Images were visually checked on the Hao Phong Uber Eats menu or its linked photo thumbnails. The six retained additions and their precise source URLs are recorded in `site-config.js`. We **could not download the JPEG bytes in this execution environment** because its network blocks external host/DNS requests, so the ZIP contains photo mappings and an executable downloader, **not the new six JPG files**. The real photo files are downloaded on the GitHub Pages runner (which normally has internet access). Until then the website attempts the same *exact* Uber Eats CDN URLs in the browser. If both fail, an accessible photo placeholder appears instead of a broken-image icon. No other restaurant's photos are used.
 
 - **Chef's Specials**: new photos of *Soft shell crab* and *Chicken Farm Rice Noodle Soup*. There are still 13 menu items. Seven now have photo mappings (five original locally, two additional approved URLs), six retain honest placeholders. All prices unchanged.
-- **Food Gallery**: six additional dishes — Combination Fried Rice; Seafood Char Kway Teow; Seafood Congee; Prawn & Pork Rice Paper Rolls; Prawn Dumplings/Wontons; King Prawn & Sliced Pork Noodles. 18 original photos plus 6 additional = **24 entries** with no photo reused between Chef's Specials and Gallery.
+- **Food Gallery**: four additional dishes (Combination Fried Rice; Seafood Char Kway Teow; Seafood Congee; Prawn & Pork Rice Paper Rolls). 18 original photos plus 4 additional = **22 entries** with no photo reused between Chef's Specials and Gallery.
 - *Lobster tail and noodle in XO sauce* retains the corrected image, label and **$95** from the original menu.
 
 ### Deploy with GitHub Pages (recommended)
 
 1. Extract the ZIP into the **root of** `phomai739391/haophong` or your chosen repository; commit and push to `main`.
 2. Settings → Pages → Source: **GitHub Actions**. The included `.github/workflows/static.yml` runs `python3 scripts/fetch_uber_photos.py` before uploading the website. Downloaded files are then served locally in the Pages artifact and will be available at `/haophong/images/uber/...`.
-3. Check the Actions log for `Downloaded:` and `Summary: saved 8 of 8`. If fewer than eight are downloaded, the site has an external CDN fallback; re-run the workflow after the CDN recovers. Do not claim the photos are locally hosted until the deploy log confirms them.
+3. Check the Actions log for `Downloaded:` and `Summary: saved 6 of 6`. If fewer than six are downloaded, the site has an external CDN fallback; re-run the workflow after the CDN recovers. Do not claim the photos are locally hosted until the deploy log confirms them.
 4. Open the deployed site and verify both the Chef section and Gallery visually on desktop/mobile. Confirm phone number, opening hours and Google Map iframe as these are externally sourced.
 5. Only add a CNAME and configure DNS for `haophong.com.au` when the owner controls the domain. See GitHub's current Pages custom-domain docs.
 
@@ -28,7 +39,7 @@ On an internet-connected computer, in the extracted directory run:
 python3 scripts/fetch_uber_photos.py --strict
 ```
 
-A successful run places eight JPEGs in `images/uber/`; ZIP them together with the site to make the archive genuinely self-contained. The command uses Python's standard library, checks file naming and JPEG magic bytes, and never changes the menu data.
+A successful run places six JPEGs in `images/uber/`; ZIP them together with the site to make the archive genuinely self-contained. The command uses Python's standard library, checks file naming and JPEG magic bytes, and never changes the menu data.
 
 ### Sources and naming
 
@@ -46,7 +57,7 @@ Hours listed: 10:30 am–9:30 pm on Monday–Tuesday / Thursday–Sunday; closed
 
 Google review UI Kit remains **optional** and requires a restricted browser key, relevant enabled Google Maps APIs and billing. Without it the ten sourced reviews still render.
 
-Brand icon `assets/hao-phong-mark.svg` remains a provisional original HP monogram because no official logo file has been supplied.
+The header and footer display `assets/hao-phong-logo-reference.png`, precisely cropped from the user-supplied Hao Phong logo reference. The HP SVG remains as the favicon. Request a high-resolution/vector master logo for maximum crispness on retina screens.
 
 ## QA status
 
