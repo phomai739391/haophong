@@ -26,3 +26,13 @@ At all three viewports: the supplied wordmark loaded; the Chef carousel next con
 - Live Google Maps iframe, optional paid Google Places UI Kit, domain DNS and public server routing.
 - Full accessibility audit, third-party browser compatibility, source high-resolution logo fidelity.
 
+
+
+## V6.6 logo QA (4 November 2026)
+
+- Replaced header and footer lockup on **both** pages with the **exact user-approved transparent PNG**, no image regeneration or font substitution.
+- Verified source image is RGBA, alpha 0–255 and dark background compositing works.
+- Derived gold **H** favicon from the approved logo (other design assets unchanged).
+- Chromium offline visual checks at 375px, 768px, 1440px on both pages: image loaded in header and footer, **no viewport horizontal overflow** and **no JavaScript page errors**.
+- Menu displays 24 category buttons; home displays 13 Chef's Specials.
+- Browser test loaded local HTML/CSS/JS and primary images via in-memory assets because this environment blocks direct `file://` and loopback HTTP navigation. External Google Fonts/Maps and remote Uber Eats images were not verified by this test; confirm on GitHub Pages after publishing.

@@ -1,3 +1,9 @@
+# Hao Phong V6.6 — Gold Logo Approved
+
+The customer-approved gold `Hào Phong` wordmark (with the “Vietnamese & Chinese Restaurant” subtitle) is now the header and footer logo on both HTML pages. Source: `assets/hao-phong-gold-approved.png` (the provided transparent PNG; **not** an approximation or AI regeneration). A matching gold H favicon was cropped from this exact image. The rest of the V6.5 restaurant website, menu, pricing, image mappings and behavior are preserved. See `UPDATE_NOTES_V6_6.md` and `QA_REPORT.md`.
+
+---
+
 > **Latest update V6.5:** Restored sharp HP SVG + editable HAO PHONG wordmark, with matching geometric font for the wordmark only. See `UPDATE_NOTES_V6_5.md`. The rest of the site typography remains original.
 
 # Hao Phong Restaurant — V6.3 · Client refinements
