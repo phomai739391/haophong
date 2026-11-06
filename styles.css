@@ -67,3 +67,11 @@ h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.045em;line-heigh
   .footer-logo-image {width:min(320px, 100%);}
 }
 @media(max-width:370px) { .brand-logo-image {width:178px;} }
+
+/* Client-approved comparison: red-border / no-border original logo artwork.
+   No re-rendering, text replacement or font approximation. */
+.brand-logo-image{width:238px; height:auto; max-width:100%; object-fit:contain;}
+.footer-logo-image{width:310px; height:auto; max-width:100%; object-fit:contain;}
+@media(max-width:900px){.brand-logo-image{width:203px;}}
+@media(max-width:640px){.brand-logo-image{width:174px;}.footer-logo-image{width:min(285px,100%);}}
+@media(max-width:370px){.brand-logo-image{width:158px;}}
