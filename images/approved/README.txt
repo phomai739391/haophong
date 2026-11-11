@@ -1,1 +1,0 @@
-Only add original food photographs you own or are expressly permitted to reuse here. Convert to WebP and list them in site-config.js as images/approved/<filename>. No Uber Eats imagery is included in this folder.

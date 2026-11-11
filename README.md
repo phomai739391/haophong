@@ -1,12 +1,6 @@
-# Hao Phong V6.6 — Gold Logo Approved
+# Hao Phong Restaurant
 
-The customer-approved gold `Hào Phong` wordmark (with the “Vietnamese & Chinese Restaurant” subtitle) is now the header and footer logo on both HTML pages. Source: `assets/hao-phong-gold-approved.png` (the provided transparent PNG; **not** an approximation or AI regeneration). A matching gold H favicon was cropped from this exact image. The rest of the V6.5 restaurant website, menu, pricing, image mappings and behavior are preserved. See `UPDATE_NOTES_V6_6.md` and `QA_REPORT.md`.
-
----
-
-> **Latest update V6.5:** Restored sharp HP SVG + editable HAO PHONG wordmark, with matching geometric font for the wordmark only. See `UPDATE_NOTES_V6_5.md`. The rest of the site typography remains original.
-
-# Hao Phong Restaurant — V6.3 · Client refinements
+Static HTML/CSS/JavaScript website for the Vietnamese and Chinese restaurant at 136 Hopkins Street, Footscray VIC 3011. The site has no backend or database.
 
 **2 November 2026** · Vietnamese & Chinese Restaurant · 136 Hopkins Street, Footscray VIC 3011
 
@@ -63,8 +57,8 @@ Hours listed: 10:30 am–9:30 pm on Monday–Tuesday / Thursday–Sunday; closed
 
 Google review UI Kit remains **optional** and requires a restricted browser key, relevant enabled Google Maps APIs and billing. Without it the ten sourced reviews still render.
 
-The header and footer display `assets/hao-phong-logo-reference.png`, precisely cropped from the user-supplied Hao Phong logo reference. The HP SVG remains as the favicon. Request a high-resolution/vector master logo for maximum crispness on retina screens.
+The header and footer display `assets/hao-phong-logo.png`; `assets/hao-phong-favicon.png` is used as the favicon.
 
 ## QA status
 
-See `QA_REPORT.md` for test results and limitations. This session could **not** validate CDN images inside Chromium against the live site, because browser and container have no external network access. The verified source photographs were viewed through the web search service. The downloader has only been tested for error handling in this environment, not for successful remote transfer. Do not assume successful image download until the workflow confirms it.
+JavaScript and Python syntax checks pass locally. External Uber Eats images and Google Maps remain dependent on network access at runtime.

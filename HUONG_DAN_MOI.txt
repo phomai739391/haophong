@@ -1,7 +1,0 @@
-HAO PHONG WEBSITE - LOGO CO-VIEN-DO
-Day la ban website HTML/CSS/JS day du, duoc tao lai tu ban da chinh sua.
-GitHub Pages: tai cac FILE NAM TRONG THU MUC NAY len ROOT repository (khong tai ca thu muc me).
-index.html = trang chu, menu.html = thuc don.
-Logo: assets/hao-phong-logo.png (co/khong vien do).
-Anh chup tham khao nam trong goi tong hop, khong phai anh AI.
-Luu y: anh Uber Eats bo sung co the can download khi deploy qua GitHub Actions.

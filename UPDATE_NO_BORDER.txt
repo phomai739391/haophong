@@ -1,1 +1,0 @@
-Đã bỏ viền màu beige quanh images/a.webp trên trang chủ, ở cả desktop và mobile. Giữ nguyên ảnh và toàn bộ các phần khác.
